@@ -23,7 +23,7 @@ userSchema.post('save', function (doc, next) {
 console.log('new user was created and saved', doc);
 })
 
-//fire a function before a doc is saved to db
+// fire a function before a doc is saved to db
 userSchema.pre('save', async function (next) {
    console.log('user about to be created and save', this);
    const salt = await bcrypt.genSalt();
